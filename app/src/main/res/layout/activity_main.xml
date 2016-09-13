@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ © 2016 Twisted Pair Solutions, Inc. All rights reserved.
+ Twisted Pair Solutions Confidential Restricted.
+ Not for use or re-distribution without Twisted Pair Solutions prior written permission.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.motorolasolutions.bluetoothscansample.MainActivity">
+
+    <TextView
+        android:id="@+id/tvPairedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paired Devices"/>
+    <ListView
+        android:id="@+id/lvPairedDevices"
+        android:layout_width="match_parent"
+        android:background="@color/material_grey_300"
+        android:layout_height="wrap_content"
+        tools:layout_height="100dp"
+        android:layout_below="@id/tvPairedTitle"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:id="@+id/tvAvailableTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvPairedDevices"
+        android:text="Available Devices"/>
+    <ProgressBar
+        android:id="@+id/bluetoothScanProgressBar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvAvailableTitle"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+    <ListView
+        android:id="@+id/lvScanDevices"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvAvailableTitle"/>
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvScanDevices"
+        android:text="Scan"/>
+    <!--<Button-->
+        <!--android:id="@+id/btnPTT"-->
+        <!--android:background="#0000FF"-->
+        <!--android:text="OFF"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@id/btnScan"/>-->
+</RelativeLayout>
